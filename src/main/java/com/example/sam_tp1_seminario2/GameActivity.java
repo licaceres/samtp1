@@ -140,6 +140,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         else if (v == buttonRight) {
             board.setNewDirection(MazeBoard.Direction.EAST);
         }
+        if (board.getPlayer().getX() == 2 && board.getPlayer().getY() == 2){
+            finish();
+        }
     }
 
     private void getDatos() {
